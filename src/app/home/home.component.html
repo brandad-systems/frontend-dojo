@@ -1,0 +1,5 @@
+<div *ngFor="let lesson of lessons; let i = index">
+  <div (click)="routeTo(i)">
+    {{ lesson.title }}
+  </div>
+</div>

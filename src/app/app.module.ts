@@ -12,6 +12,7 @@ import {ReactiveComponent} from './lesson-one/reactive/reactive.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ReactiveFormArrayComponent } from './lesson-one/reactive-form-array/reactive-form-array.component';
 import { TemplateDrivenFormArrayLikeComponent } from './lesson-one/template-driven-form-array-like/template-driven-form-array-like.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TemplateDrivenFormArrayLikeComponent } from './lesson-one/template-driv
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

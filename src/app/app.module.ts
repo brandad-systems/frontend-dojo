@@ -10,6 +10,8 @@ import {HomeComponent} from './home/home.component';
 import {TemplateDrivenComponent} from './lesson-one/template-driven/template-driven.component';
 import {ReactiveComponent} from './lesson-one/reactive/reactive.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ReactiveFormArrayComponent } from './lesson-one/reactive-form-array/reactive-form-array.component';
+import { TemplateDrivenFormArrayLikeComponent } from './lesson-one/template-driven-form-array-like/template-driven-form-array-like.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     LessonThreeComponent,
     HomeComponent,
     TemplateDrivenComponent,
-    ReactiveComponent
+    ReactiveComponent,
+    ReactiveFormArrayComponent,
+    TemplateDrivenFormArrayLikeComponent
   ],
   imports: [
     BrowserModule,

@@ -6,9 +6,9 @@ import {FormControl, FormGroup} from "@angular/forms";
   template: `
     <h1>Bücherverzeichnis - Reactive</h1>
 
-    <form [formGroup]="buchFormular" (ngSubmit)="buecher.push(buchFormular.value)">
+    <form [formGroup]="buchFormular" (ngSubmit)="submit()">
       <label>Bezeichnung</label>
-      <input autocomplete="off" type="text" formControlName="bezeichnung">
+      <input autocomplete="off" type="text" formControlName="bezeichnung" required>
       <label>ISBN</label>
       <input autocomplete="off" type="text" formControlName="isbn">
       <button type="submit">Produkt hinzufügen</button>
@@ -27,4 +27,10 @@ export class ReactiveComponent {
   })
 
   buecher = [];
+
+  submit() {
+    if(this.buchFormular.valid){
+      this.buecher.push(this.buchFormular.value)
+    }
+  }
 }

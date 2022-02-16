@@ -7,10 +7,10 @@ import {Component} from '@angular/core';
 
     <form #buchFormular="ngForm" (ngSubmit)="buecher.push(buchFormular.value)">
       <label>Bezeichnung</label>
-      <input autocomplete="off" type="text" name="bezeichnung" ngModel>
+      <input autocomplete="off" type="text" name="bezeichnung" ngModel required>
       <label>ISBN</label>
       <input autocomplete="off" type="text" name="isbn" ngModel>
-      <button type="submit">Produkt hinzufügen</button>
+      <button type="submit" [disabled]="!buchFormular.valid">Produkt hinzufügen</button>
     </form>
 
     <div *ngFor="let buch of buecher">

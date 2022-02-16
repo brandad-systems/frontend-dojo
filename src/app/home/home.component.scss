@@ -1,0 +1,36 @@
+.card {
+  aspect-ratio: 16 / 9;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-content {
+  flex-grow: 1;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.avatar.angular {
+  background-image: url('/assets/icons/angular.png');
+  background-size: cover;
+}
+
+.avatar.html5 {
+  background-image: url('/assets/icons/html5.png');
+  background-size: cover;
+}
+
+.avatar.css3 {
+  background-image: url('/assets/icons/css3.png');
+  background-size: cover;
+}

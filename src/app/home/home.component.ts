@@ -12,19 +12,22 @@ export class HomeComponent {
 
   lessons: Lesson[] = [
     {
-      title: 'First',
-      description: 'First Description',
-      url: 'lesson/1'
+      title: 'Angular: Forms',
+      description: 'Template Driven VS. Reactive',
+      url: 'lesson/1',
+      type: 'angular'
     },
     {
-      title: 'Second',
-      description: 'Second Description',
-      url: 'lesson/2'
+      title: 'CSS: Layout',
+      description: 'Grid & Flexbox',
+      url: 'lesson/2',
+      type: 'css3',
     },
     {
       title: 'Third',
       description: 'Third Description',
-      url: 'lesson/3'
+      url: 'lesson/3',
+      type: 'html5'
     }
   ]
 

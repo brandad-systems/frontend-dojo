@@ -1,5 +1,16 @@
-<div *ngFor="let lesson of lessons; let i = index">
-  <a [routerLink]="lesson.url">
-    {{ lesson.title }}
+<div class="container">
+  <a *ngFor="let lesson of lessons; let i = index" [routerLink]="lesson.url">
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="avatar" [ngClass]="lesson.type"></div>
+        <mat-card-title>{{ lesson.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        {{ lesson.description }}
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-button [routerLink]="lesson.url">Ansehen</button>
+      </mat-card-actions>
+    </mat-card>
   </a>
 </div>

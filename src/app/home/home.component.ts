@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { Lesson } from '../models/lesson.model';
 
 @Component({
@@ -9,7 +8,7 @@ import { Lesson } from '../models/lesson.model';
 })
 export class HomeComponent {
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   lessons: Lesson[] = [
     {
@@ -28,9 +27,5 @@ export class HomeComponent {
       url: 'lesson/3'
     }
   ]
-
-  routeTo(index: number) {
-    this.router.navigateByUrl(this.lessons[index].url)
-  }
 
 }

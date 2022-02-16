@@ -16,8 +16,8 @@ import {Component} from '@angular/core';
 
           <div *ngFor="let autor of autoren; let i=index">
             <!-- The repeated alias template -->
-            <label for="autor-{{ autor }}">Autor:</label>
-            <input id="autor-{{ autor }}" name="author-{{ autor }}" type="text" ngModel required>
+            <label for="autor-{{ i }}">Autor:</label>
+            <input id="autor-{{ i }}" name="author-{{ i }}" type="text" ngModel required>
           </div>
         </div>
         <button type="submit" [disabled]="!buchFormular.valid">Produkt hinzufügen</button>

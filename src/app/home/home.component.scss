@@ -20,17 +20,27 @@ a {
   text-decoration: none;
 }
 
+.avatar {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+}
+
 .avatar.angular {
   background-image: url('/assets/icons/angular.png');
-  background-size: cover;
 }
 
 .avatar.html5 {
   background-image: url('/assets/icons/html5.png');
-  background-size: cover;
 }
 
 .avatar.css3 {
   background-image: url('/assets/icons/css3.png');
-  background-size: cover;
+}
+
+mat-card-content {
+  margin-top: 16px;
 }

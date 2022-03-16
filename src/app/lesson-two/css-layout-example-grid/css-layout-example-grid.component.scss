@@ -1,0 +1,60 @@
+.grid-basics {
+    border: 6px solid black;
+
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    .card {
+        background-color: khaki;
+    }
+
+    .one {
+        grid-column: span 2;
+    }
+
+    .four {
+        grid-column: span 2;
+    }
+
+    .five {
+        grid-column-start: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
+
+.grid-area {
+    border: 6px solid black;
+
+    display: grid;
+    gap: 2rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+        'one one two five'
+        'three four four five';
+
+    .card {
+        background-color: khaki;
+    }
+
+    .one {
+        grid-area: one;
+    }
+    
+    .two {
+        grid-area: two;
+    }
+    
+    .three {
+        grid-area: three;
+    }
+    
+    .four {
+        grid-area: four;
+    }
+    
+    .five {
+        grid-area: five;
+    }
+}

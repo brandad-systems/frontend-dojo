@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
+import { CssLayoutExampleFlexComponent } from './lesson-two/css-layout-example-flex/css-layout-example-flex.component';
+import { CssLayoutExampleGridComponent } from './lesson-two/css-layout-example-grid/css-layout-example-grid.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import {MatButtonModule} from "@angular/material/button";
     TemplateDrivenComponent,
     ReactiveComponent,
     ReactiveFormArrayComponent,
-    TemplateDrivenFormArrayLikeComponent
+    TemplateDrivenFormArrayLikeComponent,
+    CssLayoutExampleFlexComponent,
+    CssLayoutExampleGridComponent
   ],
   imports: [
     BrowserModule,

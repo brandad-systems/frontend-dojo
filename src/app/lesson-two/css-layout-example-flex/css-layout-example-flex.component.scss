@@ -1,0 +1,50 @@
+.flex-basics {
+    border: 6px solid black;
+
+    .card {
+        background-color: mediumaquamarine;
+    }
+}
+
+.flex-alignments {
+    border: 6px solid black;
+
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    .card {
+        flex: 1;
+        background-color: mediumaquamarine;
+    }
+
+    .card:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .card:nth-child(2) {
+        align-self: flex-start;
+    }
+}
+
+.flex-wrap {
+    border: 6px solid black;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+
+    .card {
+        width: 400px;
+        background-color: mediumaquamarine;
+    }
+
+    .card:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .card:nth-child(2) {
+        align-self: flex-start;
+    }
+}

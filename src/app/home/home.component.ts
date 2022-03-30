@@ -24,9 +24,15 @@ export class HomeComponent {
       type: 'css3',
     },
     {
-      title: 'Third',
-      description: 'Third Description',
+      title: 'RxJs: Observables',
+      description: 'Observables all the way down',
       url: 'lesson/3',
+      type: 'rxjs'
+    },
+    {
+      title: 'Lesson 4',
+      description: 'tbd',
+      url: 'lesson/4',
       type: 'html5'
     }
   ]

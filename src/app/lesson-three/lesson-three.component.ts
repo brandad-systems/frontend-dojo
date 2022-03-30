@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Observable} from "rxjs";
 
 @Component({
@@ -18,11 +18,12 @@ export class LessonThreeComponent implements OnInit {
       observer.next(300); // happens asynchronously
     }, 1000);
 
-    // subscriber.error('When error is hit the observable stops emitting');
+    // observer.error('When error is hit the observable stops emitting');
 
     setTimeout(() => {
       observer.complete();
-    }, 2500);
+      observer.error('When error is hit the observable stops emitting');
+    }, 1500);
 
     setTimeout(() => {
       observer.next(400);

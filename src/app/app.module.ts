@@ -18,9 +18,13 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import { CssLayoutExampleFlexComponent } from './lesson-two/css-layout-example-flex/css-layout-example-flex.component';
 import { CssLayoutExampleGridComponent } from './lesson-two/css-layout-example-grid/css-layout-example-grid.component';
+import { LessonFourComponent } from './lesson-four/lesson-four.component';
+import { SimpleAnimationComponent } from './lesson-four/simple-animation/simple-animation.component';
+import { SequentialAnimationComponent } from './lesson-four/sequential-animation/sequential-animation.component';
+import { MultiStepAnimationComponent } from './lesson-four/multi-step-animation/multi-step-animation.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     LessonOneComponent,
     LessonTwoComponent,
@@ -31,7 +35,11 @@ import { CssLayoutExampleGridComponent } from './lesson-two/css-layout-example-g
     ReactiveFormArrayComponent,
     TemplateDrivenFormArrayLikeComponent,
     CssLayoutExampleFlexComponent,
-    CssLayoutExampleGridComponent
+    CssLayoutExampleGridComponent,
+    LessonFourComponent,
+    SimpleAnimationComponent,
+    MultiStepAnimationComponent,
+    SequentialAnimationComponent
   ],
   imports: [
     BrowserModule,

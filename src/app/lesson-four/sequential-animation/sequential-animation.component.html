@@ -1,0 +1,10 @@
+<h2>Sequentielle Animation</h2>
+
+<button (click)="addCard()">Add Card!</button>
+<br>
+<button (click)="deleteAllCards()">DELETE ALL!</button>
+<br>
+<br>
+<div class="card-container" [@listAnimation]="listItems.length">
+  <div *ngFor="let item of listItems; let i = index" class="card" (click)="onCardClick(i)">{{item}}</div>
+</div>

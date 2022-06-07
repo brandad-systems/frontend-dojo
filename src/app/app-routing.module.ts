@@ -5,6 +5,11 @@ import { LessonFourComponent } from './lesson-four/lesson-four.component';
 import { LessonOneComponent } from './lesson-one/lesson-one.component';
 import { LessonThreeComponent } from './lesson-three/lesson-three.component';
 import { LessonTwoComponent } from './lesson-two/lesson-two.component';
+import { LessonFiveComponent } from "./lesson-five/lesson-five.component";
+import { AmTypographyComponent } from './lesson-five/am-typography/am-typography.component';
+import { AmComponentsComponent } from "./lesson-five/am-components/am-components.component";
+import { AmOverviewComponent } from './lesson-five/am-overview/am-overview.component';
+
 
 const routes: Routes = [
   {
@@ -26,6 +31,24 @@ const routes: Routes = [
   {
     path: 'lesson/4',
     component: LessonFourComponent
+  },
+  {
+    path: 'lesson/5',
+    component: LessonFiveComponent,
+    children: [
+      {
+        path: 'am-overview',
+        component: AmOverviewComponent
+      },
+      {
+        path: 'am-typography',
+        component: AmTypographyComponent
+      },
+      {
+        path: 'am-components',
+        component: AmComponentsComponent
+      }
+    ]
   }
 ]
 

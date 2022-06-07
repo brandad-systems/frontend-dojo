@@ -1,5 +1,9 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="navbar">
   <span class="brand-name" routerLink="/">Frontend Dojo</span>
+
+  <mat-slide-toggle [formControl]="toggleControl" class="mr-8">
+    <mat-icon>dark_mode</mat-icon>
+  </mat-slide-toggle>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

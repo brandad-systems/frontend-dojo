@@ -34,6 +34,12 @@ export class HomeComponent {
       description: 'tbd',
       url: 'lesson/4',
       type: 'html5'
+    },
+    {
+      title: 'Angular Material',
+      description: 'Getting started with Angular Material',
+      url: 'lesson/5/am-overview',
+      type: 'angular'
     }
   ]
 

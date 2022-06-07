@@ -13,15 +13,17 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ReactiveFormArrayComponent } from './lesson-one/reactive-form-array/reactive-form-array.component';
 import { TemplateDrivenFormArrayLikeComponent } from './lesson-one/template-driven-form-array-like/template-driven-form-array-like.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatCardModule} from "@angular/material/card";
-import {MatButtonModule} from "@angular/material/button";
 import { CssLayoutExampleFlexComponent } from './lesson-two/css-layout-example-flex/css-layout-example-flex.component';
 import { CssLayoutExampleGridComponent } from './lesson-two/css-layout-example-grid/css-layout-example-grid.component';
 import { LessonFourComponent } from './lesson-four/lesson-four.component';
 import { SimpleAnimationComponent } from './lesson-four/simple-animation/simple-animation.component';
 import { SequentialAnimationComponent } from './lesson-four/sequential-animation/sequential-animation.component';
 import { MultiStepAnimationComponent } from './lesson-four/multi-step-animation/multi-step-animation.component';
+import { LessonFiveComponent } from './lesson-five/lesson-five.component';
+import { MaterialModule } from "./angular-material/material.module";
+import { AmTypographyComponent } from './lesson-five/am-typography/am-typography.component';
+import { AmComponentsComponent } from './lesson-five/am-components/am-components.component';
+import { AmOverviewComponent } from './lesson-five/am-overview/am-overview.component';
 
 @NgModule({
   declarations: [	
@@ -39,7 +41,11 @@ import { MultiStepAnimationComponent } from './lesson-four/multi-step-animation/
     LessonFourComponent,
     SimpleAnimationComponent,
     MultiStepAnimationComponent,
-    SequentialAnimationComponent
+    SequentialAnimationComponent,
+    LessonFiveComponent,
+    AmTypographyComponent,
+    AmComponentsComponent,
+    AmOverviewComponent
   ],
   imports: [
     BrowserModule,
@@ -47,9 +53,7 @@ import { MultiStepAnimationComponent } from './lesson-four/multi-step-animation/
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatButtonModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

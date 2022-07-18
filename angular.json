@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/highlight.js/styles/obsidian.css",
               "src/styles.scss"
             ],
             "scripts": []

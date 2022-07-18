@@ -30,17 +30,23 @@ export class HomeComponent {
       type: 'rxjs'
     },
     {
-      title: 'Lesson 4',
-      description: 'tbd',
+      title: 'Angular Animations',
+      description: 'Animationen mit @angular/animations',
       url: 'lesson/4',
-      type: 'html5'
+      type: 'angular'
     },
     {
       title: 'Angular Material',
       description: 'Getting started with Angular Material',
       url: 'lesson/5/am-overview',
       type: 'angular'
-    }
+    },
+    {
+      title: 'Observable Operators',
+      description: 'Nützliche Operatoren und Anwendungszwecke',
+      url: 'lesson/6/operators-overview',
+      type: 'angular'
+    },
   ]
 
 }

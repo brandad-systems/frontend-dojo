@@ -9,6 +9,8 @@ import { LessonFiveComponent } from "./lesson-five/lesson-five.component";
 import { AmTypographyComponent } from './lesson-five/am-typography/am-typography.component';
 import { AmComponentsComponent } from "./lesson-five/am-components/am-components.component";
 import { AmOverviewComponent } from './lesson-five/am-overview/am-overview.component';
+import {OperatorsOverviewComponent} from "./lesson-six/operators-overview/operators-overview.component";
+import {LessonSixComponent} from "./lesson-six/lesson-six.component";
 
 
 const routes: Routes = [
@@ -49,6 +51,16 @@ const routes: Routes = [
         component: AmComponentsComponent
       }
     ]
+  },
+  {
+    path: 'lesson/6',
+    component: LessonSixComponent,
+    children: [
+      {
+        path: 'operators-overview',
+        component: OperatorsOverviewComponent
+      }
+    ]
   }
 ]
 
@@ -56,5 +68,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
+export class AppRoutingModule {
 }

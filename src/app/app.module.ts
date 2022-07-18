@@ -24,9 +24,12 @@ import { MaterialModule } from "./angular-material/material.module";
 import { AmTypographyComponent } from './lesson-five/am-typography/am-typography.component';
 import { AmComponentsComponent } from './lesson-five/am-components/am-components.component';
 import { AmOverviewComponent } from './lesson-five/am-overview/am-overview.component';
+import { OperatorsOverviewComponent } from './lesson-six/operators-overview/operators-overview.component';
+import { LessonSixComponent } from './lesson-six/lesson-six.component';
+import {HighlightCodeDirective} from "./shared/highlight.directive";
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     LessonOneComponent,
     LessonTwoComponent,
@@ -45,7 +48,10 @@ import { AmOverviewComponent } from './lesson-five/am-overview/am-overview.compo
     LessonFiveComponent,
     AmTypographyComponent,
     AmComponentsComponent,
-    AmOverviewComponent
+    AmOverviewComponent,
+    OperatorsOverviewComponent,
+    LessonSixComponent,
+    HighlightCodeDirective
   ],
   imports: [
     BrowserModule,

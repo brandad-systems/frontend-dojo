@@ -49,3 +49,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .navbar {
   justify-content: space-between;
 }
+
+pre {
+  max-width: 80vw;
+  margin-inline: auto;
+  @media(max-width: 1000px) {
+    max-width: calc(100% - 20px);
+  }
+}

@@ -70,6 +70,9 @@ pre {
 
 .container {
   max-width: 980px;
+  &.full-bleed {
+    max-width: 90vw;
+  }
   margin-inline: auto;
   @media (max-width: 1000px) {
     max-width: calc(100% - 20px);

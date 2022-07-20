@@ -69,7 +69,7 @@ pre {
 }
 
 .container {
-  max-width: 80vw;
+  max-width: 980px;
   margin-inline: auto;
   @media (max-width: 1000px) {
     max-width: calc(100% - 20px);
@@ -78,4 +78,8 @@ pre {
 
 .pt-20 {
   padding-top: 20px;
+}
+
+.pb-200 {
+  padding-bottom: 200px;
 }

@@ -30,7 +30,7 @@ export class SearchService {
     if (Math.random() > 0.5) {
       return throwError(() => new Error('Suche nicht erfolgreich')).pipe(delay(1500));
     }
-    const results = this.terms.filter((term) => term.indexOf(searchTerm) > 0);
+    const results = this.terms.filter((term) => term.toLowerCase().indexOf(searchTerm.toLowerCase()) > 0);
     return of(results).pipe(delay(1500));
   }
 }

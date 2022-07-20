@@ -1,7 +1,7 @@
 <h1>Observables</h1>
 
 <p>
-  Reaktive Muster helfen uns in einer Asynchronen Welt besser mit Datenänderungen umzugehen. RxJS bestehen im Grunde aus
+  Reaktive Muster helfen uns in einer asynchronen Welt besser mit Datenänderungen umzugehen. RxJS bestehen im Grunde aus
   diesen Teilen:
 </p>
 <ul>
@@ -20,6 +20,11 @@
     on e.g. setTimeout or requestAnimationFrame or others.
   </li>
 </ul>
+<p>
+  Durch den Einsatz von Observables können wir die Performance unserer App auch erheblich steigern, da wir nicht mehr
+  auf die reguläre Changedetection angewiesen sind, sondern unsere Komponenten auf das 'onPush' Prinzip umstellen
+  können.
+</p>
 
 <pre>
   <code highlight>{{ snippet.observable }}</code>
@@ -66,7 +71,6 @@
   <div>
     <h3>Error Handling</h3>
     <ul>
-      error_handling
       <li><app-rx-link name="catchError" type="error_handling"></app-rx-link></li>
       <li><app-rx-link name="retry" type="error_handling"></app-rx-link></li>
       <li><app-rx-link name="retryWhen" type="error_handling"></app-rx-link></li>

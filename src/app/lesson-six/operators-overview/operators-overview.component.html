@@ -1,7 +1,85 @@
-<p>operators-overview works!</p>
+<h1>Observables</h1>
+
+<p>
+  Reaktive Muster helfen uns in einer Asynchronen Welt besser mit Datenänderungen umzugehen. RxJS bestehen im Grunde aus
+  diesen Teilen:
+</p>
+<ul>
+  <li>Observable: represents the idea of an invokable collection of future values or events.</li>
+  <li>Observer: is a collection of callbacks that knows how to listen to values delivered by the Observable.</li>
+  <li>Subscription: represents the execution of an Observable, is primarily useful for cancelling the execution.</li>
+  <li>
+    Operators: are pure functions that enable a functional programming style of dealing with collections with operations
+    like map, filter, concat, reduce, etc.
+  </li>
+  <li>
+    Subject: is equivalent to an EventEmitter, and the only way of multicasting a value or event to multiple Observers.
+  </li>
+  <li>
+    Schedulers: are centralized dispatchers to control concurrency, allowing us to coordinate when computation happens
+    on e.g. setTimeout or requestAnimationFrame or others.
+  </li>
+</ul>
+
 <pre>
-  <code highlight>{{ snippet.observer }}</code>
+  <code highlight>{{ snippet.observable }}</code>
 </pre>
+
+<h2>Nützliche Operatoren</h2>
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap">
+  <div>
+    <h3>Erzeugend</h3>
+    <ul>
+      <li><app-rx-link name="fromEvent" type="creation"></app-rx-link></li>
+      <li><app-rx-link name="of" type="creation"></app-rx-link></li>
+      <li><app-rx-link name="interval" type="creation"></app-rx-link></li>
+      <li><app-rx-link name="defer" type="creation"></app-rx-link></li>
+    </ul>
+  </div>
+  <div>
+    <h3>Kombinierend</h3>
+    <ul>
+      <li><app-rx-link name="combineLatest" type="combination"></app-rx-link></li>
+      <li><app-rx-link name="merge" type="combination"></app-rx-link></li>
+      <li><app-rx-link name="withLatestFrom" type="combination"></app-rx-link></li>
+    </ul>
+  </div>
+  <div>
+    <h3>Filtern</h3>
+    <ul>
+      <li><app-rx-link name="filter" type="filtering"></app-rx-link></li>
+      <li><app-rx-link name="distinctUntilChanged" type="filtering"></app-rx-link></li>
+      <li><app-rx-link name="debounceTime" type="filtering"></app-rx-link></li>
+      <li><app-rx-link name="take" type="filtering"></app-rx-link></li>
+    </ul>
+  </div>
+  <div>
+    <h3>Transformation</h3>
+    <ul>
+      <li><app-rx-link name="map" type="transformation"></app-rx-link></li>
+      <li><app-rx-link name="pluck" type="transformation"></app-rx-link></li>
+      <li><app-rx-link name="mergeMap" type="transformation"></app-rx-link></li>
+      <li><app-rx-link name="switchMap" type="transformation"></app-rx-link></li>
+    </ul>
+  </div>
+  <div>
+    <h3>Error Handling</h3>
+    <ul>
+      error_handling
+      <li><app-rx-link name="catchError" type="error_handling"></app-rx-link></li>
+      <li><app-rx-link name="retry" type="error_handling"></app-rx-link></li>
+      <li><app-rx-link name="retryWhen" type="error_handling"></app-rx-link></li>
+    </ul>
+  </div>
+</div>
+<h2>Umgang mit Promises</h2>
+
+<p>
+  Viele Operatoren nehmen auch Promises an und verarbeiten diese. Aber manchmal möchte man mehr Kontrolle über den
+  Ausführungszeitpunkt haben. Observables können auch wieder zu einem Promise gewandelt werden.
+</p>
+
 <pre>
-  <code highlight>{{ snippet.httpCache }}</code>
+  <code highlight>{{ snippet.promise }}</code>
 </pre>

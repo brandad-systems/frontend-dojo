@@ -1,0 +1,15 @@
+<h1>Better User Input handling</h1>
+
+<input [formControl]="searchInput" />
+<ng-container *ngIf="searchResult$ | async as resultWrapper">
+  <span *ngIf="resultWrapper.loading">Loading...</span>
+  <span *ngIf="resultWrapper.error" style="color: red">{{ resultWrapper.error }}</span>
+  <div *ngFor="let result of resultWrapper.results">{{ result }}</div>
+</ng-container>
+
+<pre>
+  <code highlight>{{ snippet.userInputHtml }}</code>
+</pre>
+<pre>
+  <code highlight>{{ snippet.userInput }}</code>
+</pre>

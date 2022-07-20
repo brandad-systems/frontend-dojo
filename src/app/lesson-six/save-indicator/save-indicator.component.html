@@ -1,0 +1,12 @@
+<h1>Save Indicator</h1>
+
+<div style="display: flex; flex-direction: column; max-width: 300px; align-items: flex-end">
+  <input style="width: 100%" [formControl]="input" type="text" />
+  <span>{{ saveStatus$ | async }}</span>
+</div>
+<pre>
+  <code highlight>{{ snippet.saveIndicatorHtml }}</code>
+</pre>
+<pre>
+  <code highlight>{{ snippet.saveIndicator }}</code>
+</pre>

@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-ghp": "ng build --output-path docs --base-href /frontend-dojo/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "prepare": "husky install"

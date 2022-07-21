@@ -22,23 +22,23 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'lesson/1',
+    path: 'lesson/angular/forms',
     component: LessonOneComponent,
   },
   {
-    path: 'lesson/2',
+    path: 'lesson/css/grid-and-flexbox',
     component: LessonTwoComponent,
   },
   {
-    path: 'lesson/3',
+    path: 'lesson/rxjs/observables',
     component: LessonThreeComponent,
   },
   {
-    path: 'lesson/4',
+    path: 'lesson/angular/animations',
     component: LessonFourComponent,
   },
   {
-    path: 'lesson/5',
+    path: 'lesson/angular/material',
     component: LessonFiveComponent,
     children: [
       {
@@ -53,10 +53,14 @@ const routes: Routes = [
         path: 'am-components',
         component: AmComponentsComponent,
       },
+      {
+        path: '**',
+        component: AmOverviewComponent,
+      },
     ],
   },
   {
-    path: 'lesson/6',
+    path: 'lesson/rxjs/operators',
     component: LessonSixComponent,
     children: [
       {
@@ -78,6 +82,10 @@ const routes: Routes = [
       {
         path: 'save-indicator',
         component: SaveIndicatorComponent,
+      },
+      {
+        path: '**',
+        component: OperatorsOverviewComponent,
       },
     ],
   },

@@ -66,6 +66,9 @@ pre {
   @media (max-width: 1000px) {
     max-width: calc(100% - 20px);
   }
+  &.inline {
+    display: inline-block;
+  }
 }
 
 .container {

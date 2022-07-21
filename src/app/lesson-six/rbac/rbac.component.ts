@@ -14,7 +14,7 @@ export class RbacComponent implements OnInit {
   constructor(private auth: Authentication, private db: DbService){
       this.isUser = auth.authState.map(state => !!state);
       this.isAdmin = auth.authState.switchMap(state => {
-          return db.get('/admins/\${state.uid}').map(data => !!data)
+          return db.get(\`/admins/\${state.uid}\`).map(data => !!data)
       })
   }
 }`,

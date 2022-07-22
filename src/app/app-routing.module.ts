@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { LessonFourComponent } from './lesson-four/lesson-four.component';
-import { LessonOneComponent } from './lesson-one/lesson-one.component';
-import { LessonThreeComponent } from './lesson-three/lesson-three.component';
+import { LessonFourComponent } from './sessions/angular/lesson-four/lesson-four.component';
+import { LessonOneComponent } from './sessions/angular/lesson-one/lesson-one.component';
+import { LessonThreeComponent } from './sessions/rxjs/lesson-three/lesson-three.component';
 import { LessonTwoComponent } from './lesson-two/lesson-two.component';
-import { LessonFiveComponent } from './lesson-five/lesson-five.component';
-import { AmTypographyComponent } from './lesson-five/am-typography/am-typography.component';
-import { AmComponentsComponent } from './lesson-five/am-components/am-components.component';
-import { AmOverviewComponent } from './lesson-five/am-overview/am-overview.component';
-import { OperatorsOverviewComponent } from './lesson-six/operators-overview/operators-overview.component';
-import { LessonSixComponent } from './lesson-six/lesson-six.component';
-import { RoutingComponent } from './lesson-six/routing/routing.component';
-import { UserInputComponent } from './lesson-six/user-input/user-input.component';
-import { RbacComponent } from './lesson-six/rbac/rbac.component';
-import { SaveIndicatorComponent } from './lesson-six/save-indicator/save-indicator.component';
+import { LessonFiveComponent } from './sessions/angular/lesson-five/lesson-five.component';
+import { AmTypographyComponent } from './sessions/angular/lesson-five/am-typography/am-typography.component';
+import { AmComponentsComponent } from './sessions/angular/lesson-five/am-components/am-components.component';
+import { AmOverviewComponent } from './sessions/angular/lesson-five/am-overview/am-overview.component';
+import { OperatorsOverviewComponent } from './sessions/rxjs/lesson-six/operators-overview/operators-overview.component';
+import { LessonSixComponent } from './sessions/rxjs/lesson-six/lesson-six.component';
+import { RoutingComponent } from './sessions/rxjs/lesson-six/routing/routing.component';
+import { UserInputComponent } from './sessions/rxjs/lesson-six/user-input/user-input.component';
+import { RbacComponent } from './sessions/rxjs/lesson-six/rbac/rbac.component';
+import { SaveIndicatorComponent } from './sessions/rxjs/lesson-six/save-indicator/save-indicator.component';
 
 const routes: Routes = [
   {
@@ -22,72 +22,13 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'lesson/angular/forms',
-    component: LessonOneComponent,
-  },
-  {
-    path: 'lesson/css/grid-and-flexbox',
+    path: 'session/css/grid-and-flexbox',
     component: LessonTwoComponent,
   },
+  { path: 'session/rxjs', loadChildren: () => import('./sessions/rxjs/rxjs.module').then((m) => m.RxjsModule) },
   {
-    path: 'lesson/rxjs/observables',
-    component: LessonThreeComponent,
-  },
-  {
-    path: 'lesson/angular/animations',
-    component: LessonFourComponent,
-  },
-  {
-    path: 'lesson/angular/material',
-    component: LessonFiveComponent,
-    children: [
-      {
-        path: 'am-overview',
-        component: AmOverviewComponent,
-      },
-      {
-        path: 'am-typography',
-        component: AmTypographyComponent,
-      },
-      {
-        path: 'am-components',
-        component: AmComponentsComponent,
-      },
-      {
-        path: '**',
-        component: AmOverviewComponent,
-      },
-    ],
-  },
-  {
-    path: 'lesson/rxjs/operators',
-    component: LessonSixComponent,
-    children: [
-      {
-        path: 'operators-overview',
-        component: OperatorsOverviewComponent,
-      },
-      {
-        path: 'routing',
-        component: RoutingComponent,
-      },
-      {
-        path: 'user-input',
-        component: UserInputComponent,
-      },
-      {
-        path: 'rbac',
-        component: RbacComponent,
-      },
-      {
-        path: 'save-indicator',
-        component: SaveIndicatorComponent,
-      },
-      {
-        path: '**',
-        component: OperatorsOverviewComponent,
-      },
-    ],
+    path: 'session/angular',
+    loadChildren: () => import('./sessions/angular/angular.module').then((m) => m.AngularModule),
   },
 ];
 

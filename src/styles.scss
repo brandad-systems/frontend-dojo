@@ -58,6 +58,11 @@ body {
 
 .navbar {
   justify-content: space-between;
+  .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 pre {

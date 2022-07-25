@@ -9,6 +9,7 @@ import { CssLayoutExampleFlexComponent } from './lesson-two/css-layout-example-f
 import { CssLayoutExampleGridComponent } from './lesson-two/css-layout-example-grid/css-layout-example-grid.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CssLayoutExampleFlexComponent,
     CssLayoutExampleGridComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, SharedModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, SharedModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -13,7 +13,7 @@ import {
   share,
   switchAll,
 } from 'rxjs/operators';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-save-indicator',
@@ -75,7 +75,7 @@ saveStatus$ = merge(this.savesInProgress$, this.savesCompleted$)
 
   ngOnInit(): void {}
 
-  input = new FormControl('');
+  input = new UntypedFormControl('');
   savesInProgress = 0;
 
   // fake save request

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive',
@@ -20,9 +20,9 @@ import { FormControl, FormGroup } from '@angular/forms';
   `,
 })
 export class ReactiveComponent {
-  buchFormular = new FormGroup({
-    bezeichnung: new FormControl(),
-    isbn: new FormControl(),
+  buchFormular = new UntypedFormGroup({
+    bezeichnung: new UntypedFormControl(),
+    isbn: new UntypedFormControl(),
   });
 
   buecher = [];

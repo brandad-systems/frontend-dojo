@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormArray, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form-array',
@@ -30,18 +30,18 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
   `,
 })
 export class ReactiveFormArrayComponent {
-  buchFormular = new FormGroup({
-    bezeichnung: new FormControl(),
-    isbn: new FormControl(),
-    authors: new FormArray([]),
+  buchFormular = new UntypedFormGroup({
+    bezeichnung: new UntypedFormControl(),
+    isbn: new UntypedFormControl(),
+    authors: new UntypedFormArray([]),
   });
 
   get autoren() {
-    return this.buchFormular.get('authors') as FormArray;
+    return this.buchFormular.get('authors') as UntypedFormArray;
   }
 
   addAutor() {
-    this.autoren.push(new FormControl());
+    this.autoren.push(new UntypedFormControl());
   }
 
   buecher = [];

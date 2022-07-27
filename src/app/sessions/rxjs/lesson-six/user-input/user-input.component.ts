@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { catchError, Observable, of, retry, startWith } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter, map, switchMap } from 'rxjs/operators';
 import { SearchService } from './search.service';
@@ -42,7 +42,7 @@ ngOnInit(): void {
   loading = { loading: true, results: [], error: '' };
 
   searchResult$: Observable<{ loading: boolean; results: string[]; error: string }>;
-  searchInput = new FormControl('');
+  searchInput = new UntypedFormControl('');
 
   ngOnInit(): void {
     this.searchResult$ = this.searchInput.valueChanges.pipe(

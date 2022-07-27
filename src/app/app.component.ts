@@ -1,5 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -10,7 +10,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AppComponent {
   @HostBinding('class') className = '';
-  toggleControl = new FormControl(false);
+  toggleControl = new UntypedFormControl(false);
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(

@@ -7,9 +7,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { DojocardComponent } from './dojocard/dojocard.component';
 
 @NgModule({
-  declarations: [HighlightCodeDirective],
+  declarations: [HighlightCodeDirective, DojocardComponent],
   imports: [
     CommonModule,
     MatCardModule,

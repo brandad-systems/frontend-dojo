@@ -10,7 +10,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "prepare": "husky install",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
+    "storybook": "npm run docs:json && start-storybook -p 6007",
+    "build-storybook": "npm run docs:json && build-storybook"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
@@ -41,10 +44,21 @@
     "@angular-eslint/template-parser": "~14.0.2",
     "@angular/cli": "^14.1.0",
     "@angular/compiler-cli": "^14.1.0",
+    "@babel/core": "^7.18.10",
+    "@compodoc/compodoc": "^1.1.19",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/angular": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.27.1",
     "@typescript-eslint/parser": "5.27.1",
+    "babel-loader": "^8.2.5",
     "eslint": "^8.17.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",

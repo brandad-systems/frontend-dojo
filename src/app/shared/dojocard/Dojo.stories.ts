@@ -5,6 +5,8 @@ import { moduleMetadata } from '@storybook/angular';
 import { MatCardModule } from '@angular/material/card';
 import { descriptionOfComplexObject } from './DescriptionOfComplexObject';
 import { User } from '../../../stories/User';
+import { userEvent, screen } from '@storybook/testing-library';
+import { MatButtonModule } from '@angular/material/button';
 
 const userExmaple: User = {
   name: 'adam',
@@ -35,7 +37,10 @@ export default {
   },
   decorators: [
     moduleMetadata({
-      imports: [MatCardModule],
+      imports: [
+        MatCardModule, 
+        MatButtonModule
+      ],
     }),
   ],
 } as Meta;

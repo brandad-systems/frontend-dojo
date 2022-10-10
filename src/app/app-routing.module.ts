@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'session/angular',
     loadChildren: () => import('./sessions/angular/angular.module').then((m) => m.AngularModule),
   },
+  {
+    path: 'session/graphql',
+    loadChildren: () => import('./sessions/graphql/graphql.module').then((m) => m.GraphqlModule),
+  },
 ];
 
 @NgModule({

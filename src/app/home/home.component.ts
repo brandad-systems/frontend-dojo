@@ -46,5 +46,11 @@ export class HomeComponent {
       url: 'session/rxjs/operators',
       type: 'angular',
     },
+    {
+      title: 'GraphQL with Apollo',
+      description: 'Query language for reading and mutating data',
+      url: 'session/graphql',
+      type: 'angular',
+    },
   ];
 }

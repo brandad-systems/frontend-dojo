@@ -10,6 +10,7 @@ import { CssLayoutExampleGridComponent } from './lesson-two/css-layout-example-g
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { ApolloBoost, ApolloBoostModule } from 'apollo-angular-boost';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,14 @@ import { HttpClientModule } from '@angular/common/http';
     CssLayoutExampleFlexComponent,
     CssLayoutExampleGridComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, SharedModule, HttpClientModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, SharedModule, HttpClientModule, ApolloBoostModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(apolloBoost: ApolloBoost) {
+    apolloBoost.create({
+      uri: 'http://localhost:4000/graphql',
+    });
+  }
+}

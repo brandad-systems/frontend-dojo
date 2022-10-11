@@ -1,3 +1,17 @@
-<p>
-  graphql works!
-</p>
+<div>
+  <ul *ngFor="let book of (books | async)?.books">
+    <li>{{ book.title }}</li>
+  </ul>
+</div>
+
+<div *ngFor="let author of (authors | async)?.authors">
+  {{ author.name }}
+  <br>
+
+  <ul *ngFor="let book of author.books">
+    <li>{{ book.title }}</li>
+  </ul>
+</div>
+
+<button (click)="addBook()">Add Book</button>
+<button (click)="addAuthor()">Add Author</button>
